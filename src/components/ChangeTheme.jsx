@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+import { useThemeContext } from "../context/ThemeContext";
 
 const ChangeTheme = () => {
 
-    const { language, theme, toggleTheme } = useContext(ThemeContext);
+    const { language, theme, toggleTheme } = useThemeContext();
 
     return ( 
         <div className={`${theme}-theme-clr`}>

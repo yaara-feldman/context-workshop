@@ -1,11 +1,11 @@
-import { useContext, useState } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { UserContext } from "../context/UserContext";
+import { useState } from "react";
+import { useThemeContext } from "../context/ThemeContext";
+import { useUserContext } from "../context/UserContext";
 
 const UsernameChanger = () => {
 
-    const { setUsername } = useContext(UserContext);
-    const { theme, language } = useContext(ThemeContext);
+    const { setUsername } = useUserContext();
+    const { theme, language } = useThemeContext();
 
     const [text, setText] = useState("");
 

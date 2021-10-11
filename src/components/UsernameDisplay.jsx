@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { UserContext } from "../context/UserContext";
+import { useThemeContext } from "../context/ThemeContext";
+import { useUserContext } from "../context/UserContext";
 
 const UsernameDisplay = () => {
 
-    const { username } = useContext(UserContext);
-    const { theme } = useContext(ThemeContext);
+    const { username } = useUserContext();
+    const { theme } = useThemeContext();
 
     return (
         <div className={`${theme}-theme-clr`}>
