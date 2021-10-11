@@ -1,13 +1,11 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
+//this component should render a button that toggles the language when clicked.
+//the text in the component should be in the current language of the website, and the classnames should correspond with the current theme
 
 const ChangeLanguage = () => {
 
-    const { theme, toggleLanguage, language } = useContext(ThemeContext);
-
     return ( 
-        <div className={`${theme}-theme-clr`}>
-            <button className={`${theme}-theme-button`} onClick={toggleLanguage}>{language === "en" ? "hebrew" : "אנגלית"}</button>
+        <div className={`-theme-clr`}>
+            <button className={`-theme-button`}>hebrew</button>
         </div>
      );
 }

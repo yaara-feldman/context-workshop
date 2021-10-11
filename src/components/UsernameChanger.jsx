@@ -1,19 +1,16 @@
-import { useContext, useState } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { UserContext } from "../context/UserContext";
+//this component should have an input and a button that changes the username to the input's value
+//the text in the component should be in the current language of the website, and the classnames should correspond with the current theme
 
 const UsernameChanger = () => {
 
-    const { setUsername } = useContext(UserContext);
-    const { theme, language } = useContext(ThemeContext);
 
-    const [text, setText] = useState("");
+    // const [text, setText] = useState("");
 
     return (
-        <div className={`${theme}-theme-clr`}>
-            {language === "en" ? "what is your name?" : "איך קוראים לך?"}<br /><br />
-            <input value={text} onChange={e => setText(e.target.value)} /><br />
-            <button className={`${theme}-theme-button`} onClick={() => setUsername(text)}>{language === "en" ? "change" : "החלפ/י"}</button>
+        <div className={`-theme-clr`}>
+            What is your name?<br /><br />
+            <input /><br />
+            <button className={`-theme-button`}>change username</button>
         </div>
     );
 }

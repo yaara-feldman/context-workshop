@@ -1,15 +1,11 @@
-import { useContext } from "react";
-import { ThemeContext } from "../context/ThemeContext";
-import { UserContext } from "../context/UserContext";
+//this component should render the current username
 
 const UsernameDisplay = () => {
 
-    const { username } = useContext(UserContext);
-    const { theme } = useContext(ThemeContext);
 
     return (
-        <div className={`${theme}-theme-clr`}>
-            {username}
+        <div className={`-theme-clr`}> {/* the button's color should match the current theme */}
+            
         </div>
     );
 }

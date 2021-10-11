@@ -5,7 +5,7 @@ const Buttons = () => {
 
 
     return (
-        <div style={{display: 'flex'}}>
+        <div style={{display: 'flex', direction:'ltr'}}>
             <ChangeTheme />
             <ChangeLanguage />
         </div>

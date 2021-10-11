@@ -1,18 +1,3 @@
-import React, { useState } from "react";
-
-export const UserContext = React.createContext();
-
-export const UserProvider = ({ children }) => {
-  const [username, setUsername] = useState("");
-
-  return (
-    <UserContext.Provider
-      value={{
-        username,
-        setUsername,
-      }}
-    >
-      {children}
-    </UserContext.Provider>
-  );
-};
+//make a context called userContext and a context provider component. 
+//the context should control the username
+//the values that are provided to the context should be: username, setUsername
